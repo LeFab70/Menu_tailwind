@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tailwindsCSS3</title>
+    <link href="./styles.css" rel="stylesheet" />
+  </head>
+  <body class="bg-cyan-400">
+    <nav class="p-5 bg-white shadow md:flex md:justify-between md:items-center">
+      <div class="flex justify-between items-center">
+        <span class="text-2xl font-[popping] cursor-pointer font-bold">
+          <img
+            src="../assets/img/tailwinds.png"
+            class="h-10 inline"
+            alt="tailwinds"
+          />
+          Le-Fab</span
+        >
+        <span
+          ><img
+            src="../assets/img/barssolid.svg"
+            class="h-5 bg-cover bg-center md:hidden block cursor-pointer"
+            alt=""
+            onclick="Menu(this)"
+        /></span>
+      </div>
+
+      <ul
+        class="md:flex md:items-center z-[-1] md:z-[auto] md:static absolute w-full md:w-auto left-0 md:pl-0 pl-7 opacity-0 md:opacity-100 top-[-400px] transition-all ease-in duration-500 bg-white"
+      >
+        <li
+          class="my-6 md:my-0 text-xl hover:text-cyan-500 border-b-4 border-b-red-200 mx-4 duration-500"
+        >
+          <a href="#">Home</a>
+        </li>
+        <li
+          class="my-6 md:my-0 text-xl hover:text-cyan-500 hover:border-b-4 hover:border-b-red-200 mx-4 duration-500"
+        >
+          <a href="#">Services</a>
+        </li>
+        <li
+          class="my-6 md:my-0 text-xl hover:text-cyan-500 hover:border-b-4 hover:border-b-red-200 mx-4 duration-500"
+        >
+          <a href="#">About</a>
+        </li>
+        <li
+          class="my-6 md:my-0 text-xl hover:text-cyan-500 hover:border-b-4 hover:border-b-red-200 mx-4 duration-500"
+        >
+          <a href="#">Contact</a>
+        </li>
+        <li
+          class="my-6 md:my-0 text-xl hover:text-cyan-500 mx-4 hover:border-b-4 hover:border-b-red-200 duration-500"
+        >
+          <a href="#">Bloc's</a>
+        </li>
+        <button
+          class="mx-4 mb-2 md:mb-0 rounded bg-cyan-400 px-6 py-2 text-white font-[popping] font-bold duration-500 hover:bg-cyan-300"
+        >
+          Get started
+        </button>
+      </ul>
+    </nav>
+    <!-- <div class="flex flex-row">
+      <div class="basis-1/4 bg-red-400">01</div>
+      <div class="basis-1/4 bg-dark-400">02</div>
+      <div class="basis-1/2 bg-blue-400">03</div>
+    </div>
+
+    <div class="flex flex-row">
+      <button>Button 1</button>
+      <button>Button 2</button>
+      <button>Button 3</button>
+    </div>
+
+    <div class="grid grid-cols-3">
+      <button class="bg-red-50">Click me</button>
+      <button class="bg-red-100">Click me</button>
+      <button class="bg-red-200">Click me</button>
+      <button class="bg-red-300">Click me</button>
+      <button class="bg-red-400">Click me</button>
+      <button class="bg-red-500">Click me</button>
+      <button class="bg-red-600">Click me</button>
+      <button class="bg-red-700">Click me</button>
+      <button class="bg-red-800">Click me</button>
+   
+    </div> -->
+    <!-- <div class="mt-2 border-b w-1/2 px-4 py-2">
+      <input type="text" class="w-full" value="" />
+    </div> -->
+    <script>
+      function Menu(e) {
+        let showMenu = document.querySelector("nav ul");
+        console.log(showMenu);
+        e.getAttribute("src") == "../assets/img/close.svg"
+          ? (e.setAttribute("src", "../assets/img/barssolid.svg"),
+            showMenu.classList.remove("opacity-100"),
+            showMenu.classList.remove("top-[80px]"))
+          : (e.setAttribute("src", "../assets/img/close.svg"),
+            showMenu.classList.add("opacity-100"),
+            showMenu.classList.add("top-[80px]"));
+        console.log(e.getAttribute("src"));
+      }
+    </script>
+  </body>
+</html>
